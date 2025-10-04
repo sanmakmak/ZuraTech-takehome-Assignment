@@ -1,0 +1,40 @@
+@import './variables';
+
+.user-products {
+  padding: 2rem;
+  background: $bg-color;
+
+  h1 {
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+  }
+
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .product-card {
+    background: white;
+    border: 1px solid $card-border;
+    border-radius: 6px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #444;
+    }
+  }
+}

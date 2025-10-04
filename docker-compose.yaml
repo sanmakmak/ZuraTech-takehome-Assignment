@@ -86,10 +86,14 @@ services:
       WORDPRESS_DB_NAME: "${WP_DB_NAME}"
     volumes:
       - ./wordpress/plugins:/var/www/html/wp-content/plugins
+     # - ./wordpress:/var/www/html
     networks:
       - app-network
+    build:
+      context: ./wordpress
     ports:
       - "${WP_PORT:-8010}:80"
+      - "9003:9003" # Xdebug port
 
   codeigniter:
     image: webdevops/php-apache:7.4
