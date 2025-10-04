@@ -107,3 +107,20 @@ GET http://localhost:8010/wp-json/my-api/v1/user/:id/products
 
 ## Output:
 <img width="415" height="758" alt="image" src="https://github.com/user-attachments/assets/7b0b8b12-4753-42e4-9732-fe3fcc2be290" />
+
+
+## Bonus Task: Legacy Code Improvements (Security Focus)
+
+### Issues Identified in CodeIgniter 3 App:
+- No input validation/sanitization – prone to SQL Injection & XSS.
+- No authentication middleware – all endpoints publicly accessible.
+- Hardcoded credentials / tokens – no .env usage or secrets management.
+- No HTTPS enforcement – all API traffic is unencrypted.
+- No rate limiting or brute-force protection – vulnerable to abuse.
+
+### Recommended Improvements:
+- Use form validation and sanitize all inputs.
+- Implement middleware for authentication (e.g. token validation).
+- Store sensitive values in environment variables, not in code.
+- Enforce HTTPS and enable CORS only for trusted origins.
+- Add rate limiting to APIs to prevent abuse.
